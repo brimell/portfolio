@@ -1,5 +1,5 @@
 import { gsap } from "gsap";
-import { lerp, getMousePos, getSiblings } from "./utils";
+import { lerp, getMousePos } from "./utils";
 
 // Grab the mouse position and set it to mouse state
 let mouse = { x: 0, y: 0 };
@@ -42,27 +42,15 @@ export default class Cursor {
 	onScaleMouse() {
 		// Loop through all items
 		this.Item.forEach((link) => {
-			// If I am hovering on the item for on page load I want to scale the cursor media
-			if (link.matches(":hover")) {
-				this.ScaleCursor(this.Cursor.children[0], 0.8);
-			}
-			//On mouse enter scale the media-cursor to .8
-			link.addEventListener("mouseenter", () => {
-				this.ScaleCursor(this.Cursor.children[0], 0.8);
-			});
-			//On mouse enter scale the media-cursor to 0
-			link.addEventListener("mouseleave", () => {
-				this.ScaleCursor(this.Cursor.children[0], 0);
-			});
-			//Hover on a tag to expand to 1.2
+      // the child is the actual link text
 			link.children[1].addEventListener("mouseenter", () => {
 				this.Cursor.classList.add("blend");
-				this.ScaleCursor(this.Cursor.children[0], 1.2);
+				this.ScaleCursor(this.Cursor, 2);
 			});
-			// Bring scale back down .8
+
 			link.children[1].addEventListener("mouseleave", () => {
 				this.Cursor.classList.remove("blend");
-				this.ScaleCursor(this.Cursor.children[0], 0.8);
+				this.ScaleCursor(this.Cursor, 1);
 			});
 		});
 	}
@@ -74,6 +62,7 @@ export default class Cursor {
 			ease: "Power3.easeOut",
 		});
 	}
+
 	render() {
 		this.cursorConfigs.x.current = mouse.x;
 		this.cursorConfigs.y.current = mouse.y;
@@ -81,8 +70,7 @@ export default class Cursor {
 		// lerp
 		for (const key in this.cursorConfigs) {
 			// key will be x & y
-			// WTF IS LERP?
-			// Lerp - A lerp returns the value between two numbers at a specified, decimal midpoint:
+			// A lerp returns the value between two numbers at a specified, decimal midpoint:
 			this.cursorConfigs[key].previous = lerp(
 				this.cursorConfigs[key].previous,
 				this.cursorConfigs[key].current,

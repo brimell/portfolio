@@ -7,7 +7,7 @@
   pointer-events: none;
   &.blend {
     z-index: 100;
-    mix-blend-mode: exclusion;
+    // mix-blend-mode: difference;
   }
   &:before {
     content: "";

@@ -3,30 +3,6 @@ import { useEffect, useState } from "react";
 export default function Homepage() {
 	return (
 		<>
-			<header>
-				<div className="header-inner">
-					<div className="header-inner-col left">
-						<div className="header-inner-logo">
-							<h2>Laura Rimell</h2>
-						</div>
-					</div>
-					<div className="header-inner-col right">
-						<div className="header-inner-nav">
-							<span className="header-inner-nav-link">link</span>
-							<div className="header-inner-nav-menu">
-								<span className="header-inner-nav-link">
-									menu
-								</span>
-								<div className="header-inner-nav-menu-hamburger">
-									<span></span>
-									<span></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
-
 			<section className="hero">
 				<div className="container">
 					<div className="hero-inner">
@@ -65,10 +41,10 @@ export default function Homepage() {
 					<div className="hero-inner-footer">
 						<div className="hero-inner-footer-text">
 							<p>
-								Leading digital agency with solid design and
-								development expertise. We build readymade
-								websites, mobile applications, and elaborate
-								online business services.
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Provident laborum modi iure
+								suscipit mollitia molestiae, libero repellendus
+								adipisci ratione animi.
 							</p>
 						</div>
 					</div>
@@ -84,7 +60,6 @@ export default function Homepage() {
 					<path d="M16 26c8.84 0 16-5.82 16-13S24.84 0 16 0 0 5.82 0 13a11.72 11.72 0 004.12 8.71L3.33 30l7.53-4.69A19.11 19.11 0 0016 26z"></path>
 				</svg>
 			</div>
-			<div className="cursor"></div>
 		</>
 	);
 }
