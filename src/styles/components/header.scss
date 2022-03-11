@@ -9,6 +9,7 @@ header {
 		justify-content: space-between;
 		.header-inner-col {
 			.header-inner-logo {
+				cursor: pointer;
 				h2 {
 					line-height: 1;
 					margin: 0;
@@ -33,6 +34,7 @@ header {
 					display: flex;
 					align-items: center;
 					.header-inner-nav-menu-hamburger {
+						cursor: pointer;
 						width: 24px;
 						position: relative;
 						top: 1px;

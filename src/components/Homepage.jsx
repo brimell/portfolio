@@ -1,6 +1,29 @@
 import { useEffect, useState } from "react";
+import { gsap, Power3 } from "gsap";
+import $ from "jquery";
 
 export default function Homepage() {
+	const tl = gsap.timeline()
+	const ease = Power3.easeOut()
+
+	useEffect(async () => {
+
+		tl.from($('#homepageTitle'), {
+			opacity: 0,
+			y: '50',
+			ease: ease,
+		})
+		const links = $(".hero-inner-links")[0].children;
+		for (let i = 0; i < links.length; i++ ) {
+			tl.from(links[i], {
+				opacity: 0,
+				y: '50',
+				duration: 1,
+				ease: ease,
+			}, "<0.2");
+		}
+	}, []);
+
 	return (
 		<>
 			<section className="hero">
@@ -10,7 +33,9 @@ export default function Homepage() {
 							<div className="hero-inner-col left"></div>
 							<div className="hero-inner-col right">
 								<div className="hero-inner-title">
-									<h1>We make it happen</h1>
+									<h1 id="homepageTitle">
+										this and this and this...
+									</h1>
 								</div>
 								<div className="hero-inner-links">
 									<div className="hero-inner-link-item">
