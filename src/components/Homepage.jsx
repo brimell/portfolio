@@ -58,7 +58,8 @@ export default function Homepage() {
 						<div className="hero-inner-footer-text">
 							<p>
 								If you would like to receive my CV, please
-								contact me and I will get back to you ASAP
+								contact me and I will get back to you as soon as
+								possible.
 							</p>
 						</div>
 					</div>
