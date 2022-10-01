@@ -57,7 +57,7 @@ export default function Nav() {
 			<div className="header-inner">
 				<div className="header-inner-col left">
 					<div className="header-inner-logo">
-						<h2 id="navTitle">title</h2>
+						{/* <h2 id="navTitle">Portfolio</h2> */}
 					</div>
 				</div>
 				<div className="header-inner-col right">
@@ -83,6 +83,7 @@ export default function Nav() {
 			<div className="slide-out-menu">
 				<a href="">about me</a>
 				<a href="">projects</a>
+				<a href="">contact me</a>
 				</div>
 		</header>
 	);
