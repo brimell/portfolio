@@ -66,10 +66,7 @@ export default function Homepage() {
 					<div className="hero-inner-footer">
 						<div className="hero-inner-footer-text">
 							<p>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Provident laborum modi iure
-								suscipit mollitia molestiae, libero repellendus
-								adipisci ratione animi.
+								If you would like to receive my CV, please contact me and I will get back to you ASAP
 							</p>
 						</div>
 					</div>

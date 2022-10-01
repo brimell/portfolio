@@ -1,5 +1,5 @@
 header {
-	position: absolute;
+	position: fixed;
 	top: 60px;
 	left: 60px;
 	right: 60px;
@@ -16,39 +16,55 @@ header {
 					font-size: 1.5rem;
 				}
 			}
-			.header-inner-nav {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				.header-inner-nav-link {
-					&:first-child {
-						margin-right: 60px;
-					}
-					display: block;
-					font-size: 1.2rem;
-				}
-				.header-inner-nav-menu {
-					.header-inner-nav-link {
-						margin-right: 20px;
-					}
-					display: flex;
-					align-items: center;
-					.header-inner-nav-menu-hamburger {
-						cursor: pointer;
-						width: 24px;
-						position: relative;
-						top: 1px;
-						span {
-							border: 1px solid black;
-							position: relative;
-							display: block;
-							width: 100%;
-							height: 2px;
-							margin: 5px 0;
-						}
-					}
-				}
-			}
+		}
+	}
+	// hamburger menu
+	.ham {
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		transition: transform 400ms;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		.active {
+			transform: rotate(180deg);
+		}
+	}
+	.line {
+		fill: none;
+		transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+		stroke: #000;
+		stroke-width: 3;
+		stroke-linecap: round;
+	}
+
+	.ham5 .top {
+		stroke-dasharray: 40 82;
+	}
+	.ham5 .bottom {
+		stroke-dasharray: 40 82;
+	}
+	.ham5.active .top {
+		stroke-dasharray: 14 82;
+		stroke-dashoffset: -72px;
+	}
+	.ham5.active .bottom {
+		stroke-dasharray: 14 82;
+		stroke-dashoffset: -72px;
+	}
+
+	// slide out menu
+	.slide-out-menu {
+		position: fixed;
+		top: 15vh;
+		right: 3vw;
+		display: flex;
+		flex-direction: column;
+		gap: 2vh;
+
+		a {
+			opacity: 0;
 		}
 	}
 }
