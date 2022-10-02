@@ -35,7 +35,7 @@ export default function Homepage() {
 						<div className="hero-inner-banner">
 							<div className="hero-inner-col right">
 								<div className="hero-inner-title">
-									<h1 id="homepageTitle">Hi! I'm</h1>
+									<h1 id="homepageTitle">I'm</h1>
 								</div>
 								<div className="hero-inner-links">
 									<div className="hero-inner-link-item">
