@@ -6,7 +6,6 @@ import { ContextProvider } from "./context/context";
 // import Cursor from "./components/cursor";
 
 import Homepage from "./components/Homepage";
-import Nav from "./components/nav";
 import HamburgerNav from "./components/HamburgerNav";
 
 function App() {
@@ -29,7 +28,7 @@ function App() {
 			<div ref={appRef} className={`App ${loading ? "loading" : ""}`}>
 				
 
-				{$(window).height() > 1000 ? <Nav /> : <HamburgerNav />}
+				{$(window).height() < 1000 && <HamburgerNav />}
 				<Homepage />
 				{/* <div ref={cursorRef} className="cursor"></div> */}
 			</div>

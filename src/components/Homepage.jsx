@@ -35,32 +35,29 @@ export default function Homepage() {
 						<div className="hero-inner-banner">
 							<div className="hero-inner-col right">
 								<div className="hero-inner-title">
-									<h1 id="homepageTitle">I'm</h1>
+									<h1 id="homepageTitle">Hi I'm Bill Rimell</h1>
 								</div>
 								<div className="hero-inner-links">
 									<div className="hero-inner-link-item">
 										<div className="hero-inner-link-item-padding"></div>
 										<span>
-											<span>Bill</span>
+											<a href="#about">About</a>
 										</span>
 									</div>
 									<div className="hero-inner-link-item">
 										<div className="hero-inner-link-item-padding"></div>
 										<span>
-											<span>Rimell</span>
+											<a href="#contact">Projects</a>
+										</span>
+									</div>
+									<div className="hero-inner-link-item">
+										<div className="hero-inner-link-item-padding"></div>
+										<span>
+											<a href="#contact">Contact</a>
 										</span>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div className="hero-inner-footer">
-						<div className="hero-inner-footer-text">
-							<p>
-								If you would like to receive my CV, please
-								contact me and I will get back to you as soon as
-								possible.
-							</p>
 						</div>
 					</div>
 				</div>
