@@ -69,3 +69,20 @@ header {
 		}
 	}
 }
+
+.nav {
+	position: fixed;
+	top: 1vh;
+	border-radius: 20px;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	gap: 20px;
+	
+
+	.nav-inner {
+		
+	}
+}
