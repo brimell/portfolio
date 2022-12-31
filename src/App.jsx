@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import $ from "jquery";
+import * as THREE from 'three';
 
-import { ContextProvider } from "./context/context";
+import { ContextProvider } from "./components/context";
 // import Cursor from "./components/cursor";
 
 import Homepage from "./components/Homepage";
@@ -22,13 +22,11 @@ function App() {
 		});
 		// const cursor = new Cursor(cursorRef.current);
 	}, []);
-	console.log($(window).height())
+
 	return (
 		<ContextProvider>
 			<div ref={appRef} className={`App ${loading ? "loading" : ""}`}>
-				
-
-				{$(window).height() < 1000 && <HamburgerNav />}
+				<HamburgerNav />
 				<Homepage />
 				{/* <div ref={cursorRef} className="cursor"></div> */}
 			</div>

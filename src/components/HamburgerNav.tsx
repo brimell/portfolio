@@ -4,7 +4,7 @@ import { gsap, Power3 } from "gsap";
 
 export default function Nav() {
 	const tl = gsap.timeline()
-	const ease = Power3.easeOut()
+	const ease = Power3.easeOut(3)
 	const [menuOpen, setMenuOpen] = useState(false);
 
 	function menuClick() {
@@ -21,7 +21,6 @@ export default function Nav() {
 						opacity: 0,
 						x: "50",
 						duration: 1,
-						ease: ease,
 					},
 					"<0.2"
 				);
@@ -44,7 +43,6 @@ export default function Nav() {
 						opacity: 1,
 						x: "0",
 						duration: 1,
-						ease: ease,
 					},
 					"<0.2"
 				);
